@@ -36,11 +36,25 @@ function renderDocumentFile(documentOptions: DocumentOptions) {
   let width = 0
   let height = 0
   if (orientation === 'landscape') {
-    height = 12240
-    width = 15840
+    //region A4 size
+    height = 11905.511;
+    width = 16837.795;
+    //endregion
+
+    //region Letter size
+    // height = 12240
+    // width = 15840
+    //endregion
   } else {
-    width = 12240
-    height = 15840
+    //region A4 size
+    height = 16837.795;
+    width = 11905.511;
+    //endregion
+
+    //region Letter size
+    // width = 12240
+    // height = 15840
+    //endregion
   }
   return documentTemplate(width, height, orientation, marginsOptions)
 }
